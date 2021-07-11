@@ -473,6 +473,20 @@
                 }
             });
         }
+
+        // yii2-image-manager
+        var $hasFileinput = $(widgetOptionsRoot.widgetItem).find('.delete-selected-image');
+        if ($hasFileinput.length > 0) {
+            $hasFileinput.each(function() {
+                $(this).attr('data-input-id', $(this).closest('.input-group').find('input[type=hidden]').attr('id'));
+            });
+        }
+        var $hasFileinput = $(widgetOptionsRoot.widgetItem).find('.open-modal-imagemanager');
+        if ($hasFileinput.length > 0) {
+            $hasFileinput.each(function() {
+                $(this).attr('data-input-id', $(this).closest('.input-group').find('input[type=hidden]').attr('id'));
+            });
+        }
     };
 
 })(window.jQuery);
